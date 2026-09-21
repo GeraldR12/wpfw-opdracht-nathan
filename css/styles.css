@@ -171,6 +171,22 @@ footer{
     margin-top: 20px;
 }
 
+@media (min-width: 1024px) {
+    main {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .cards-container {
+        gap: 12px;
+    }
+}
+
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
@@ -182,5 +198,9 @@ footer{
 
     .cards-container {
         flex-direction: column;
+    }
+
+    article {
+        flex: 1 1 100%;
     }
 }
