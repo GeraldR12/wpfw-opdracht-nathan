@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog | Nathaniel Rasmijn</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/blog.js" defer></script>
     </head>
 
     <body>
@@ -18,15 +19,23 @@
                     <li><a href="index.html">Who am I</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>    
             </nav>
         </header>
         
         <main>
             <article class="blog-card">
-                <a href="blogs/post1.html" target="_self" rel="noopener noreferrer">
-                    <h3>Mijn Eerste Blog Post</h3>
-                    <p>Welkom op mijn eerste blog. Hier zal ik mijn gedachten en ervaringen delen over software development en andere interesses.</p></a>
+                <h3><a href="blogs/post1.html">Mijn Eerste Blog Post</a></h3>
+                <p>Welkom op mijn eerste blog. Hier zal ik mijn gedachten en ervaringen delen over software development en andere interesses.</p>
+
+                <p id="blog1-extra" hidden>
+                    Software development is een interessante vak waar ik erg van hou. Toen ik voor het eerst een game maakte, dacht ik niet dat er zoveel werk en gedachten nodig waren.
+                </p>
+                <button type="button" class="lees-meer-knop"
+                        aria-expanded="false" aria-controls="blog1-extra">
+                    Lees meer
+                </button>
             </article>
         </main>
 

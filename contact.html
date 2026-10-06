@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Nathaniel Rasmijn</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/contact.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1> Nathaniel Rasmijn </h1>
+                <p> Software Engineer Portfolio </p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Who am I</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>    
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Contact</h2>
+                <form id="contact-form" novalidate>
+                    <div class="form-veld">
+                        <label for="naam">Naam:</label>
+                        <input type="text" id="naam" name="naam" aria-describedby="naam-error">
+                        <span id="naam-error" class="foutmelding"></span>
+                    </div>
+                    <div class="form-veld">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" aria-describedby="email-error" required>
+                        <span id="email-error" class="foutmelding"></span>
+                    </div>
+                    <div class="form-veld">
+                        <label for="bericht">Bericht:</label>
+                        <textarea id="bericht" name="bericht" aria-describedby="bericht-error" required></textarea>
+                        <span id="bericht-error" class="foutmelding"></span>
+                    </div>
+                    <button type="submit">Sturen Bericht</button>
+                </form>
+
+                <p id="bevestiging" aria-live="polite"></p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Nathaniel Rasmijn</p>
+        </footer>
+    </body>
+</html>
