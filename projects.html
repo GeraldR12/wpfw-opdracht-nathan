@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projects | Nathaniel Rasmijn</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/script.js" defer></script>
+        <script src="js/projects.js" defer></script>
+        <script src="js/github.js" defer></script>
     </head>
 
     <body>
@@ -19,6 +20,7 @@
                     <li><a href="index.html">Who am I</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>    
             </nav>
         </header>
@@ -27,32 +29,19 @@
             <section>
                 <h2>Projecten</h2>
                 <p>Hier zijn enkele van mijn recente projecten:</p>
-                <div class="cards-container">
-                    <article class="project-card">
-                        <a href="https://github.com/GeraldR12/TradeWar" target="blank" rel="noopener noreferrer">
-                            <h3>TradeWar</h3>
-                            <p>TradeWar is plugin die ik heb ontwikkeld met behulp van Java, Paper API, Towny API en SQLLite. Het plugin is een systeem waar met commands je kunt towns en nations tarieven zetten voor trading, sancties en embargoes. Je kunt dit via commands doen en bewaart dit in een SQLLite database. Het plugin is gemaakt voor Minecraft servers die Towny gebruiken.
-                            </p>
-                            <span class="tech-tag">Java &bull; Paper API &bull; SQLLite &bull; Towny API</span>
-                        </a>
-                    </article>
-                    <article class="project-card">
-                        <a href="https://github.com/GeraldR12/KSCloudHost" target="blank" rel="noopener noreferrer">
-                            <h3>KSCloudHost</h3>
-                            <p>Een website die ik heb gebouwd voor een kleine hosting bedrijf genaamd KSCloudHost. De website is gebouwd met HTML, CSS en JavaScript. Het is een statische website die informatie geeft over de diensten van het bedrijf en contactinformatie biedt.
-                            </p>
-                            <span class="tech-tag">HTML &bull; CSS &bull; JavaScript</span>
-                        </a>
-                    </article>
-                    <article class="project-card">
-                        <a href="https://github.com/AnsonM03/Flores-Fuertes" target="blank" rel="noopener noreferrer">
-                            <h3>Flores-Fuertes</h3>
-                            <p>Een schoolproject dat ik en mijn team heb gebouwd voor een veiling bedrijf. De website is gebouwd met HTML, CSS, Javascript en C#. Het is een dynamische website die andere bedrijven hun veiling kan maken en beheren. Het is een project dat we hebben gebouwd voor een schoolopdracht en is niet live.
-                            </p>
-                            <span class="tech-tag">HTML &bull; CSS &bull; JavaScript &bull; C#</span>
-                        </a>
-                    </article>
+                <div class="filter-buttons">
+                    <button type="button" data-categorie="Alles" aria-pressed="true">Alles</button>
+                    <button type="button" data-categorie="Website" aria-pressed="false">Website</button>
+                    <button type="button" data-categorie="Plugin" aria-pressed="false">Plugin</button>
                 </div>
+                <div class="cards-container" id="projects-container"></div>
+            </section>
+
+            <section>
+                <h2>Mijn GitHub-repositories</h2>
+                <p>Live opgehaald via de GitHub API:</p>
+                <p id="repo-status" aria-live="polite"></p>
+                <div class="cards-container" id="repo-container"></div>
             </section>
         </main>
 
