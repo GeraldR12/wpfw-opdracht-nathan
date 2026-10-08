@@ -156,6 +156,19 @@ article{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.lees-meer-knop {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+}
+
 /* Filter Buttons Styles */
 .filter-buttons button[aria-pressed="false"] {
     display: inline-flex;
@@ -222,7 +235,7 @@ article{
     gap: 10px;
     margin-bottom: 15px;
     text-decoration: none;
-    background-color: #031743;
+    background-color: #2563eb;
     color: white;
     padding: 10px 18px;
     border-radius: 6px;
