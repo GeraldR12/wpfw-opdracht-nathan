@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan.csproj": {}
+    "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\Backend\\wpfw-opdracht-nathan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan.csproj": {
+    "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\Backend\\wpfw-opdracht-nathan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan.csproj",
+        "projectUniqueName": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\Backend\\wpfw-opdracht-nathan.csproj",
         "projectName": "wpfw-opdracht-nathan",
-        "projectPath": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan.csproj",
+        "projectPath": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\Backend\\wpfw-opdracht-nathan.csproj",
         "packagesPath": "C:\\Users\\geral\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\wpfw-opdracht-nathan\\obj\\",
+        "outputPath": "C:\\Users\\geral\\OneDrive\\Documents\\Dev\\wpfw-opdracht-nathan\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\geral\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -49,6 +49,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.12, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
