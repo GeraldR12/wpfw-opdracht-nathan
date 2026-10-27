@@ -1,0 +1,6 @@
+@wpfw_opdracht_nathan_HostAddress = http://localhost:5239
+
+GET {{wpfw_opdracht_nathan_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
