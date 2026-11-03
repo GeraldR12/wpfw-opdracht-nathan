@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 public sealed class UpdateProjectRequest
 {
     public string Titel { get; init; } = string.Empty;

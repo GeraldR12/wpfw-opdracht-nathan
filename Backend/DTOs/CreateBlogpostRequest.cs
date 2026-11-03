@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 public sealed class CreateBlogpostRequest
 {
     public string Titel { get; init; } = string.Empty;
