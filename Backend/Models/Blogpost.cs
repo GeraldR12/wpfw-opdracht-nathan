@@ -6,5 +6,5 @@ public class Blogpost
     
     public string Inhoud {get; set;}
     
-    public string Publicatiedatum {get; set;}
+    public DateTime Publicatiedatum {get; set;}
 }
