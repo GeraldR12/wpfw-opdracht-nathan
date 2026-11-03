@@ -16,7 +16,7 @@ builder.Services.AddDbContext<PortfolioDB>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("PortfolioDb"));
 });
-//builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
