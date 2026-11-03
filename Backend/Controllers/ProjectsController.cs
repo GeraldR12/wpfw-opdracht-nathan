@@ -37,7 +37,7 @@ public class ProjectsController : ControllerBase
     }
     
     [HttpPut("{id}")]
-    public async Task<ActionResult<bool>> UpdateProject(int id, UpdateProjectRequest request)
+    public async Task<ActionResult> UpdateProject(int id, UpdateProjectRequest request)
     {
         var updated = await _projectService.UpdateProjectAsync(id, request);
         if (!updated)
@@ -48,7 +48,7 @@ public class ProjectsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<bool>> DeleteProject(int id)
+    public async Task<ActionResult> DeleteProject(int id)
     {
         var deleted = await _projectService.DeleteProjectAsync(id);
         if (!deleted)
