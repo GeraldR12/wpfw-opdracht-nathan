@@ -12,7 +12,6 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo {Title = "API", Version = "v1"});
 });
 
-builder.Services.AddValidation();
 builder.Services.AddDbContext<PortfolioDB>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("PortfolioDb"));
