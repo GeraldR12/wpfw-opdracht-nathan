@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="lagen" name="Lagendiagram">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Titel -->
+        <mxCell id="title" value="&lt;b&gt;Lagendiagram – GET /api/projects&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="420" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Laagnamen (links) -->
+        <mxCell id="lbl1" value="Presentatie / Client" style="text;html=1;align=right;verticalAlign=middle;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl2" value="API-laag&lt;br&gt;(Controllers)" style="text;html=1;align=right;verticalAlign=middle;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl3" value="Business-laag&lt;br&gt;(Services)" style="text;html=1;align=right;verticalAlign=middle;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl4" value="Data-laag&lt;br&gt;(EF Core DbContext)" style="text;html=1;align=right;verticalAlign=middle;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl5" value="Database" style="text;html=1;align=right;verticalAlign=middle;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Lagen -->
+        <mxCell id="swagger" value="&lt;b&gt;Swagger UI&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;HTTP GET /api/projects&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="420" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controller" value="&lt;b&gt;ProjectsController&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;[HttpGet] GetAllProjects() → Ok(projects)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="420" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="service" value="&lt;b&gt;ProjectService&lt;/b&gt; (via IProjectService)&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;GetAllProjectsAsync() → Project omzetten naar ProjectResponse&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="320" width="420" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="&lt;b&gt;PortfolioDB&lt;/b&gt; (EF Core)&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;DbSet&amp;lt;Project&amp;gt; Projects → ToListAsync()&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="440" width="420" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sql" value="&lt;b&gt;SQL Server&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;localhost\SQLEXPRESS – database PortfolioDb, tabel Projects&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="420" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Request (omlaag, links) -->
+        <mxCell id="r1" value="HTTP-request" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;entryX=0.2;entryY=0;" edge="1" parent="1" source="swagger" target="controller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="aanroep service" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;entryX=0.2;entryY=0;" edge="1" parent="1" source="controller" target="service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="LINQ-query" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;entryX=0.2;entryY=0;" edge="1" parent="1" source="service" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="SQL SELECT" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="db" target="sql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Response (omhoog, rechts) -->
+        <mxCell id="b1" value="rijen" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#2e7d32;dashed=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;" edge="1" parent="1" source="sql" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="List&amp;lt;Project&amp;gt;" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#2e7d32;dashed=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;entryX=0.8;entryY=1;" edge="1" parent="1" source="db" target="service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="IEnumerable&amp;lt;ProjectResponse&amp;gt; (DTO)" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#2e7d32;dashed=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;entryX=0.8;entryY=1;" edge="1" parent="1" source="service" target="controller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="200 OK – JSON (ProjectResponse[])" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#2e7d32;dashed=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;entryX=0.8;entryY=1;" edge="1" parent="1" source="controller" target="swagger">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Blogposts: dezelfde lagen -->
+        <mxCell id="blogGroup" value="&lt;b&gt;Blogpost-endpoints&lt;/b&gt; (/api/blogposts)&lt;br&gt;&lt;i&gt;gebruiken dezelfde lagen&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#888888;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="160" width="300" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="bController" value="&lt;b&gt;BlogpostsController&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="730" y="210" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bService" value="&lt;b&gt;BlogpostService&lt;/b&gt; (via IBlogpostService)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="730" y="330" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bDb" value="&lt;b&gt;PortfolioDB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;DbSet&amp;lt;Blogpost&amp;gt; Blogposts&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="730" y="450" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="be1" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;" edge="1" parent="1" source="bController" target="bService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be2" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;" edge="1" parent="1" source="bService" target="bDb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bDbToSql" value="zelfde database" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#888888;dashed=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="bDb" target="sql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legenda -->
+        <mxCell id="leg1" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#1f4e79;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="200" y="690" as="sourcePoint" /><mxPoint x="250" y="690" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="leg1t" value="Request (heen)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="260" y="675" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#2e7d32;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="420" y="690" as="sourcePoint" /><mxPoint x="470" y="690" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="leg2t" value="Response (terug als DTO / JSON)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="675" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
